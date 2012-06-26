@@ -1,0 +1,66 @@
+# A previous version of this code is being ran in production
+# This is a refactored and tested/rspec version that has NOT been ran in "The Wild" yet
+# This is my first run at tests
+# Be gentle with the comments!!
+
+# I do not know if this will run on "MS", (w|d)on't use it
+
+# The default Run interval is 60 seconds and can be changed
+# @runner.set_interval(what ever value in seconds you want)
+# or
+# @runner = Kron::Runner.new( interval value goes here ).start
+
+#  Example Usage in rails
+#
+#  Times MUST be described this way only '1:30 pm', '9:25 am' '10:00 pm'
+#
+#  Place this is in app/controllers/application_controller.rb
+#
+
+#  START OF CODE EXAMPLE
+#
+#  if (!@runner or !@runner.running?) and RAILS_ENV == 'production'
+#
+#    require 'path/to/kron.rb'
+#    @runner = Kron::Runner.new.start
+#    
+#    kr = Kron::KronJob.new.set_description('Week Day Test').every('tuesday', 'friday').every(20.minute) do 
+#           Do Something Here
+#         end
+#    @runner.add_job(kr)
+#
+#    kr = Kron::KronJob.new.set_description('Week Day Test').every('thursday', 'friday').at('9:56 am', '9:57 am') do 
+#           Do Something Here
+#         end
+#    @runner << kr
+#
+#    kj = Kron::KronJob.new.every(1.minute) do 
+#           Do Something Here
+#         end
+#    @runner.add_job(kj)
+#
+#    kj = Kron::KronJob.new.every('november', 'december').on_the(17, 18).at('3:00 pm', '4:30 am') do 
+#           Do Something Here
+#         end
+#    @runner.add_job(kj)
+#
+#    kj = Kron::KronJob.new.every('month').on_the(1, 15).at('1:00 pm') do 
+#           Do Something Here
+#         end
+#    @runner.add_job(kj)
+#
+#    kj = Kron::KronJob.new.every('day').at('2:30 pm') do 
+#           Do Something Here
+#         end
+#    @runner.add_job(kj)
+#
+#    # .on( "NEEDS DATE PARSABLE STRING and will only run once and except multiple dates" )
+#    kj = Kron::KronJob.new.on('Dec 31, 2014').at('3:00 pm', '4:30 am') do 
+#           Do Something Here
+#         end
+#    @runner.add_job(kj)
+#
+#    @runner.schedule # echos out the schedule
+#  end
+#
+#  END OF CODE EXAMPLE
