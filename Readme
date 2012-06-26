@@ -1,9 +1,9 @@
 # A previous version of this code is being ran in production
 # This is a refactored and tested/rspec version that has NOT been ran in "The Wild" yet
-# This is my first run at tests
+# This is my first run at tests And my first gem
 # Be gentle with the comments!!
 
-# I do not know if this will run on "MS", (w|d)on't use it
+# Do not know if this will run on "Winders", do not use it or know how to use it, sorry 
 
 # The default Run interval is 60 seconds and can be changed
 # @runner.set_interval(what ever value in seconds you want)
