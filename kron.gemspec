@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ["thereverendruby@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{A Cron Utility For Rails.}
-  s.description = %q{Kron is a utillty for running recurring background processes within Rails, with out the need for OS access.}
+  s.description = %q{Kron is a utility for running recurring background processes within Rails, with out the need for OS access.}
 
   s.rubyforge_project = "kron"
 
